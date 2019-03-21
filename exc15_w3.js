@@ -1,6 +1,6 @@
 function groupAnimals (arr){
     var kebunBinatang = []
-    arr.sort()
+    // arr.sort(function(a, b) { return b - a })
   
     for (var i = 0; i < arr.length; i++){
       var kandang = []
@@ -12,11 +12,13 @@ function groupAnimals (arr){
         }
       }
       if (check === false){
+        // kandang.push(arr[i][0])
         kandang.push(arr[i])
         kebunBinatang.push(kandang)
       }
     }
-   return kebunBinatang
+    kebunBinatang.sort()
+    return kebunBinatang
   }
   
   // TEST CASES
